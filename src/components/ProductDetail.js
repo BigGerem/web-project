@@ -1,10 +1,11 @@
-import React, { useState} from 'react';
-
+import React, { useState, useContext } from 'react';
+import { ProductsContext } from '../AppContext';
 import useConsoleLogger from '../hooks/useConsoleLogger';
 
-const ProductDetail = ({ product }) => {
+function ProductDetail({ product }) {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
+  const products = useContext(ProductsContext);
 
   useConsoleLogger(comments);
 
@@ -13,8 +14,6 @@ const ProductDetail = ({ product }) => {
     setComments([...comments, newComment]);
     setNewComment('');
   };
-
-
 
   if (!product) {
     return <div>Product not found</div>;

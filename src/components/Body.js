@@ -11,10 +11,7 @@ class Body extends React.Component {
     return (
       <div>
         <Routes>
-          <Route
-            path='/products'
-            element={<ProductList products={products} />}
-          />
+          <Route path='/products' element={<ProductList />} />
           {products.map((product) => (
             <Route
               key={product.id}

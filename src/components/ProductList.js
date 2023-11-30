@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+// ProductList.js
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { SelectedProductsContext, ProductsContext } from '../App';
 
-function ProductList({ products }) {
-  const [selectedProducts, setSelectedProducts] = useState([]);
+function ProductList() {
+  const { selectedProducts, setSelectedProducts } = useContext(SelectedProductsContext);
+  const products = useContext(ProductsContext);
 
   const handleProductSelect = (productId) => {
     if (selectedProducts.includes(productId)) {
@@ -31,3 +34,5 @@ function ProductList({ products }) {
 }
 
 export default ProductList;
+
+
