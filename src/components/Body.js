@@ -3,15 +3,15 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
+import styles from '../styles/style.module.css';
+import products from '../data/Products';
 
 class Body extends React.Component {
   render() {
-    const { products } = this.props;
-
     return (
-      <div>
+      <div className={styles.bodyContainer}>
         <Routes>
-          <Route path='/products' element={<ProductList />} />
+          <Route path='/' element={<ProductList products={products} />} />
           {products.map((product) => (
             <Route
               key={product.id}
@@ -26,6 +26,8 @@ class Body extends React.Component {
 }
 
 export default Body;
+
+
 
 
 

@@ -1,0 +1,208 @@
+.menuLink {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    margin: 0px;
+  }
+  .menuLink {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    height: 60px;
+    width: 1000px;
+  }
+  .headerDiv {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: #333;
+  }
+  .searchInput{
+    padding: 7px;
+    font-size: 18px;
+    margin-right: 10px;
+    border-radius: 40px;
+  }
+  .headerDiv h1 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    
+  }
+  .headerLink{
+    text-decoration: none;
+  }
+  .searchComponent{
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .searchButton {
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  .productLink {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .productDetail {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 290px;
+    background-color: #ffffff;
+  }
+  
+  .productImage {
+    max-width: 100%;
+    max-height: 200px;
+  }
+  
+  .productName {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .productAuthor {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .productPrice {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .prodList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .productContainer {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .productLink {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .buyButton {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-image: none;
+    margin-right: 20px;
+    width: 110px;
+    padding: 7px;
+    color: #ffffff;
+    background-color: #f48024;
+    border-radius: 40px;
+    border: #ffffff;
+  }
+  
+  .cartButton {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    background-image: none;
+    margin-right: 20px;
+    width: 110px;
+    padding: 7px;
+    color: #ffffff;
+    background-color: #000080;
+    border-radius: 40px;
+    border: #ffffff;
+  }
+  .bodyContainer {
+    padding: 20px;
+    margin: 10px;
+    background-color: #800080;
+    height: 585px;
+  }
+  .productDetailContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin: 20px;
+  }
+  
+  .buttonsContainer {
+    display: flex;
+  }
+  
+  .productInfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    color: #ffffff;
+  }
+  
+  .commentsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 20px;
+  }
+  .imageProd{
+    width: 250px;
+    height: 380px;
+  }
+  .descript{
+    text-indent: 40px;
+    text-align: justify;
+    line-height: 150%;
+    font-size: 18px;
+  }
+  .prodName{
+    font-size: 32px;
+    margin: 20px 0px ;
+  }
+  .prodAuthor{
+    font-size: 24px;
+     margin: 10px 0px;
+  }
+  .prodPrice{
+    font-size: 22px;
+    margin: 10px 0px ;
+  }
+  .titleComment{
+    color: #ffffff;
+    font-size: 22px;
+    margin: 10px 0px ;
+  }
+  .commentForm{
+    margin: 0px ;
+  }
+  .commentLabel{
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .commentInput{
+    margin: 0px 10px;
+  }
+
+  
