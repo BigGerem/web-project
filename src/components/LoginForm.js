@@ -1,15 +1,31 @@
-// LoginForm.js
-import React, { useState } from 'react';
-import { Modal, Form, Input, Button } from 'antd';
+import React from 'react';
+import { Modal, Form, Button } from 'antd';
+import { useFormik } from 'formik';
+import MyTextInput from './FormikComp/MyTextInput';
+
 
 const LoginForm = ({ visible, onCancel, onLogin }) => {
-  const [loading, setLoading] = useState(false);
-  const handleLogin = async (values) => {
-    setLoading(true);
-    onLogin();
-    setLoading(false);
-    onCancel();
-  };
+  const formik = useFormik({
+    initialValues: {
+      username: '',
+      password: '',
+    },
+    onSubmit: (values) => {
+      onLogin(values);
+      onCancel();
+    },
+    validate: (values) => {
+      const errors = {};
+      if (!values.username) {
+        errors.username = 'Будь ласка, введіть логін!';
+      }
+      if (!values.password) {
+        errors.password = 'Будь ласка, введіть пароль!';
+      }
+      return errors;
+    },
+  });
+
   return (
     <Modal
       title="Увійти"
@@ -17,23 +33,19 @@ const LoginForm = ({ visible, onCancel, onLogin }) => {
       onCancel={onCancel}
       footer={null}
     >
-      <Form onFinish={handleLogin}>
-        <Form.Item
+      <Form onFinish={formik.handleSubmit}>
+        <MyTextInput
           label="Логін"
           name="username"
-          rules={[{ required: true, message: 'Будь ласка, введіть логін!' }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
+          type="text"
+        />
+        <MyTextInput
           label="Пароль"
           name="password"
-          rules={[{ required: true, message: 'Будь ласка, введіть пароль!' }]}
-        >
-          <Input.Password />
-        </Form.Item>
+          type="password"
+        />
         <Form.Item>
-          <Button type="primary" htmlType="submit" loading={loading}>
+          <Button type="primary" htmlType="submit" loading={formik.isSubmitting}>
             Увійти
           </Button>
         </Form.Item>
@@ -41,4 +53,6 @@ const LoginForm = ({ visible, onCancel, onLogin }) => {
     </Modal>
   );
 };
+
 export default LoginForm;
+

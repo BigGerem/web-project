@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from 'antd';
 import { CSSTransition } from 'react-transition-group';
 import LoginForm from './LoginForm';
@@ -14,12 +14,15 @@ class Menu extends React.Component {
             loginModalVisible: false,
         };
     }
-    handleLogin = () => {
-        console.log('Авторизовано!');
+
+    handleLogin = (values) => {
+        console.log('Авторизовано!', values);
         this.setState({ loginModalVisible: false });
     };
+
     render() {
         const { loginModalVisible } = this.state;
+
         return (
             <div className={styles.menu}>
                 <SearchComponent />
@@ -43,4 +46,6 @@ class Menu extends React.Component {
         );
     }
 }
+
 export default Menu;
+
